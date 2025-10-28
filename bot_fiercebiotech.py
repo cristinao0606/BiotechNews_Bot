@@ -1,3 +1,9 @@
+import sys
+if sys.version_info >= (3, 13):
+    import types
+    sys.modules['imghdr'] = types.ModuleType('imghdr')
+
+
 import os, json, time, feedparser, html
 from dotenv import load_dotenv
 from urllib.parse import urlparse
